@@ -11,7 +11,16 @@
     </form>
   <main class="main-content">
     <div class="commands">
-      <button class="team-1" [disabled]="!isEnabled(1)" type="button" (click)="onTeam1Clicked(1)"></button>
+      <button class="team-1"
+        [class.verified]="isVerified(1)"
+        [class.button-hovered]="mouseOvered && !isVerified(1)"
+        [class.button-clicked]="!isVerified(1)"
+        (mouseover)="mouseOvered=true"
+        (mouseout)="mouseOvered=false"
+        [disabled]="!isEnabled(1)"
+        type="button" 
+        (click)="onTeam1Clicked(1)">
+      </button>
       <button class="team-2" type="submit"></button>
       <button class="team-3" type="submit"></button>
       <button class="team-4" type="submit"></button>

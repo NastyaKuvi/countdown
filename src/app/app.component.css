@@ -79,13 +79,22 @@
     border: none;
   }
     
-  .commands > button:hover {
+  .commands .button-hovered {
     opacity: 0.5;
   }
-
       
   .commands > button:disabled {
     opacity: 0.5;
+  }
+
+  .commands .verified {
+    background-image: none;
+    background-color: white;  
+  }
+
+  .button-clicked {
+    border: 5px solid white;
+    background-color: white; 
   }
 
   .team-1 {
