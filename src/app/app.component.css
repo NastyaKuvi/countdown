@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .main-content {
+    flex: 1 0 auto;
+    background-image: url('../assets/image/1920-1080px-02.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  header,
+  footer {
+    flex: 0 0 auto;
+  }
+  
+  header {
+    min-height: 100px;
+  }
+  
+  .counter {
+    margin: auto;
+    font-size: 78px;
+    line-height: 8px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #339096;
+  }
+  .commands {
+    display: none;
+  }
