@@ -4,11 +4,14 @@
           <p>Введите код отмены!</p>
           <app-timer></app-timer>
       </div>     
-  </header>
+  </header>    
+  <form class="code-form" *ngIf="isToShowForm">
+      <input class="code-text" #codeText type="text" placeholder="Введите код.">
+      <input class="code-button" type="button" (click)="onCodeClicked(codeText.value)" value="Проверить.">
+    </form>
   <main class="main-content">
-
     <div class="commands">
-      <button class="team-1" type="submit"></button>
+      <button class="team-1" [disabled]="!isEnabled(1)" type="button" (click)="onTeam1Clicked(1)"></button>
       <button class="team-2" type="submit"></button>
       <button class="team-3" type="submit"></button>
       <button class="team-4" type="submit"></button>
@@ -17,6 +20,7 @@
       <button class="team-7" type="submit"></button>
       <button class="team-8" type="submit"></button>
     </div>
+
   </main>
 
   <footer>

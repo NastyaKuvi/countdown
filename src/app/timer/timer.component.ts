@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
-//import {Subscription} from 'rxjs/Subscription';
+import { TimerService } from '../timer.service';
 
 @Component({
     selector: 'app-timer',
@@ -12,9 +12,15 @@ export class TimerComponent implements OnInit {
     timerValue: string = '';
     ticks = 7200;
     sub: Subscription;
+    constructor(
+        private timerService: TimerService
+    ) {
 
+        timerService.someEvent.subscribe(value => this.stopTimer());
+    }
     ngOnInit() {
-        this.getRemainingTime();
+        //this.getRemainingTime();
+        this.startTimer();
     }
 
     private startTimer() {
@@ -31,6 +37,9 @@ export class TimerComponent implements OnInit {
                 }
             }
         );
+    }
+    stopTimer() {
+        this.sub.unsubscribe();
     }
 
   private getRemainingTime() {

@@ -21,13 +21,103 @@
   
   .counter {
     margin: auto;
-    font-size: 78px;
-    line-height: 8px;
+    font-size: 108px;
+    line-height: 58px;
     font-family: "Arial", sans-serif;
     font-weight: bold;
     text-align: center;
     color: #339096;
   }
   .commands {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around ;
+  }
+
+  .code-form {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    z-index: 10;
+    padding-top: 50px;
+    border: 1px solid #339096;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around ;
+    background-color: white;     
+    background-image: url('../assets/image/1920-1080px_logo-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .code-text {
+    height: 40px;
+    min-width: 300px;
+  }
+  
+  .code-button {
+    height: 40px;
+    min-width: 100px;
+    background-color:#339096;    
+    border: 1px solid #339096;
+  }
+
+  .commands > button {
+    width: 150px;
+    height: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 5%;
+    border: none;
+  }
+    
+  .commands > button:hover {
+    opacity: 0.5;
+  }
+
+      
+  .commands > button:disabled {
+    opacity: 0.5;
+  }
+
+  .team-1 {
+    /* background-color: red; */
+    box-shadow: 0px 0px 5px 5px darkred;        
+    background-image: url('../assets/image/25-40mm-02.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+  }
+
+  .team-2 {
+    background-color: orange;
+    box-shadow: 0px 0px 5px 5px darkred;
+  }
+  .team-3 {
+    background-color: yellow;
+    box-shadow: 0px 0px 5px 5px darkred;
+  }
+  .team-4 {
+    background-color: green;
+  }
+  .team-5 {
+    background-color: blue;
+  }
+  .team-6{
+    background-color: darkblue;
+  }
+  .team-7 {
+    background-color: violet;
+  }
+  .team-8 {
+    background-color: darkviolet;
   }
